@@ -40,7 +40,7 @@
       "description": "<p>Oil Painting</p>",
       "medium": ["oil"],
       "images": {
-        "cover": "bloo.png",
+        "cover": "bloo.jpg",
         "other": []
       }
     }

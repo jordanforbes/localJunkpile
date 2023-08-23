@@ -9,14 +9,32 @@ const ProjectList = (props) => {
   const artList = useSelector((state) => state.projectListSelector.artwork);
   const viewState = useSelector((state) => state.viewSelector.view);
   // const modeState = useSelector((state) => state.viewSelector.mode);
+  const folder = viewState === "Art" ? "artwork" : "app_project";
 
   const projectList =
     viewState === "Art" ? artList : viewState === "App" ? appList : [];
+  const imageFolder = `${process.env.PUBLIC_URL}/media/${folder}/`;
+
+  useEffect(() => {
+    console.log(projectList);
+    console.log(imageFolder);
+  }, []);
 
   return (
     <div className="projectList">
       {projectList ? (
-        projectList.map((p) => <p>{p.title}</p>)
+        projectList.map((p) => (
+          <>
+            {console.log(`${imageFolder}${p.id}/${p.images.cover}`)}
+            <div>
+              <img
+                alt={p.images.cover}
+                src={`${imageFolder}${p.id}/${p.images.cover}`}
+              />
+            </div>
+            <p>{p.title}</p>
+          </>
+        ))
       ) : (
         <p>not loaded</p>
       )}

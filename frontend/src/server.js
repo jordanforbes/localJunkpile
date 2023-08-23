@@ -1,9 +1,15 @@
+import { useSelector } from "react-redux";
 const express = require("express");
 const fs = require("fs");
 const app = express();
+const multer = require("multer");
 const PORT = 3001;
 
 app.use(express.json());
+
+const storage = multer.diskStorage({
+  destination: "public/media",
+});
 
 // endpoint to handle form submissions
 app.post("/submit", (req, res) => {
