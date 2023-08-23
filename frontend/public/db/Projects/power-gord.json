@@ -1,0 +1,23 @@
+{
+  "id": "power-gord",
+  "category": "app_project",
+  "title": "Power Gord",
+  "caption": "A Music Theory Application",
+  "description": "<p>Music Theory With a Mullet</p>",
+  "repo": "https://github.com/jordanforbes/Power-Gord",
+  "url": "https://www.powergord.com/",
+
+  "technologies": [
+    "ReactJS",
+    "ReduxJS",
+    "TonalJS",
+    "NodeJS",
+    "Bootstrap",
+    "Sass",
+    "AWS"
+  ],
+  "images": {
+    "cover": "pggridactivemobile.png",
+    "other": ["pggrid.png", "pglarge.png", "pgthumb.jpg", "pgscreenshot.png"]
+  }
+}
