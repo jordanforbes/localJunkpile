@@ -23,7 +23,7 @@ const Admin = (props) => {
   }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, files } = e.target;
 
     if (name === "title") {
       const idValue = value.replace(/\s+/g, "-").toLowerCase();
@@ -32,6 +32,26 @@ const Admin = (props) => {
         [name]: value,
         id: idValue,
       }));
+    } else if (type === "file") {
+      if (name === "cover") {
+        setFormData((prevData) => ({
+          ...prevData,
+          images: {
+            ...prevData.images,
+            cover: files[0],
+          },
+        }));
+      }
+      if (name === "other") {
+        const newOtherImages = [...formData.images.other, ...files];
+        setFormData((prevData) => ({
+          ...prevData,
+          images: {
+            ...prevData.images,
+            other: newOtherImages,
+          },
+        }));
+      }
     } else {
       setFormData((prevData) => ({
         ...prevData,
@@ -90,8 +110,13 @@ const Admin = (props) => {
         </label>
         <br />
         <label>
-          Images:
-          <input type="file" name="images" />
+          Cover Image:
+          <input type="file" name="cover" onChange={handleChange} />
+        </label>
+        <br />
+        <label>
+          Other Images:
+          <input type="file" name="other" multiple onChange={handleChange} />
         </label>
         <br />
         <button type="submit">Submit</button>
