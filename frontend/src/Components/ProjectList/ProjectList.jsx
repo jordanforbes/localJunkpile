@@ -26,13 +26,11 @@ const ProjectList = (props) => {
         projectList.map((p) => (
           <>
             {console.log(`${imageFolder}${p.id}/${p.images.cover}`)}
-            <div>
-              <img
-                alt={p.images.cover}
-                src={`${imageFolder}${p.id}/${p.images.cover}`}
-              />
-            </div>
-            <p>{p.title}</p>
+            <ArtCard
+              cover={p.images.cover}
+              src={`${imageFolder}${p.id}/${p.images.cover}`}
+              title={p.title}
+            />
           </>
         ))
       ) : (

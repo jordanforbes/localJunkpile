@@ -1,6 +1,13 @@
 .carouselImg {
-  max-height: 500px !important;
-}
+  max-height: 500px !important; }
+
+.coverImg {
+  height: 600px; }
+
+.coverImgContainer {
+  width: 300px;
+  height: 300px;
+  overflow: hidden; }
 
 .coverItem {
   float: left;
@@ -9,14 +16,10 @@
   height: 300px;
   object-fit: cover;
   overflow: hidden;
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
 .headerName {
   font-family: "lobster";
   font-size: 100px;
   text-align: center;
-  /* margin-left: 5px ;  */
-}
-
-/*# sourceMappingURL=styles.css.map */
+  /* margin-left: 5px ;  */ }
