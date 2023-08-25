@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   selected: false,
+  id: false,
   title: false,
   githubURL: false,
   projectURL: false,
@@ -26,6 +27,7 @@ export const detailSelectorSlice = createSlice({
       state.medium = false;
       state.type = false;
       state.images = [];
+      state.id = false;
     },
     setArt: (state, action) => {
       state.selected = true;
@@ -34,6 +36,7 @@ export const detailSelectorSlice = createSlice({
       state.description = action.payload.description;
       state.medium = action.payload.mediums;
       state.images = action.payload.images;
+      state.id = action.payload.id;
     },
     setApp: (state, action) => {
       state.selected = true;
@@ -48,6 +51,7 @@ export const detailSelectorSlice = createSlice({
         : false;
       state.technologies = action.payload.technologies;
       state.images = action.payload.images;
+      state.id = action.payload.id;
     },
     getDetails: (state) => {
       return state;

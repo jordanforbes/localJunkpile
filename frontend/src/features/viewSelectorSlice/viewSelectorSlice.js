@@ -22,7 +22,7 @@ export const viewSelectorSlice = createSlice({
       state.view = "App";
     },
     selectAdmin: (state) => {
-      state.view = "Admin";
+      state.mode = "Admin";
     },
   },
 });

@@ -11,15 +11,19 @@ const ArtCard = (props) => {
   const viewState = useSelector((state) => state.viewSelector.view);
   const modeState = useSelector((state) => state.viewSelector.mode);
   const projectState = useSelector((state) => state.detailSelector);
+
   const setDetails = () => {
-    viewState === "ArtList"
+    viewState === "Art"
       ? dispatch(setArt(props.project))
       : dispatch(setApp(props.project));
     dispatch(selectDetail());
+    console.log(projectState);
+    console.log("!!!!artcardSrc");
+    console.log(props.src);
   };
 
   return (
-    <div>
+    <div className="artcardcontainer">
       <button onClick={setDetails}>
         <div className="coverImgContainer">
           <img className="coverImg" alt={props.cover} src={props.src} />

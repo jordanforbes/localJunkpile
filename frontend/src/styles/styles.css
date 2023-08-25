@@ -6,8 +6,14 @@
 
 .coverImgContainer {
   width: 300px;
-  height: 300px;
+  height: 400px;
   overflow: hidden; }
+
+.artcardcontainer {
+  display: block;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .coverItem {
   float: left;

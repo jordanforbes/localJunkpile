@@ -5,9 +5,18 @@ import { Carousel } from "react-bootstrap";
 
 const ProjectDetails = (props) => {
   const dispatch = useDispatch();
-  // const viewState = useSelector((state) => state.viewSelector.view);
+  const viewState = useSelector((state) => state.viewSelector.view);
   const projectState = useSelector((state) => state.detailSelector);
 
+  const folder = viewState === "Art" ? "artwork" : "app_project";
+
+  const imageFolder = `${process.env.PUBLIC_URL}/media/${folder}/`;
+  const appList = useSelector(
+    (state) => state.projectListSelector.app_projects
+  );
+  const artList = useSelector((state) => state.projectListSelector.artwork);
+  const projectList =
+    viewState === "Art" ? artList : viewState === "App" ? appList : [];
   const [cover, setCover] = useState("");
   const [otherImages, setOtherImages] = useState([]);
 
@@ -15,18 +24,23 @@ const ProjectDetails = (props) => {
     dispatch(selectList());
   };
 
-  const parseImages = () => {
-    projectState.images.map((i) => {
-      i.cover === true
-        ? setCover(i.image)
-        : setOtherImages([...otherImages, i.image]);
-    });
-    return cover;
-  };
+  useEffect(() => {
+    setCover(imageFolder + projectState.id + "/" + projectState.images.cover);
+  }, []);
+
+  // const parseImages = () => {
+  //   projectState.images.map((i) => {
+  //     i.cover === true
+  //       ? setCover(i.image)
+  //       : setOtherImages([...otherImages, i.image]);
+  //   });
+  //   return cover;
+  // };
 
   useEffect(() => {
-    parseImages();
-  }, []);
+    console.log("!!!!!!!!!!!!!!!cover");
+    console.log(cover);
+  }, [cover]);
 
   const buildCarousel = () => {
     return (
@@ -34,11 +48,11 @@ const ProjectDetails = (props) => {
         <Carousel.Item>
           <img className="carouselImg" src={cover} alt="cover" />
         </Carousel.Item>
-        {otherImages.map((i) => (
+        {/* {otherImages.map((i) => (
           <Carousel.Item>
             <img className="carouselImg" src={i} alt="other" />
           </Carousel.Item>
-        ))}
+        ))} */}
       </Carousel>
     );
   };

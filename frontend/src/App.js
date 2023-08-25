@@ -97,7 +97,13 @@ const App = () => {
             </ButtonGroup>
           </div>
           <div className="row">
-            {viewState === "Admin" ? <Admin /> : <ProjectList />}
+            {modeState === "Admin" ? (
+              <Admin />
+            ) : modeState === "Detail" ? (
+              <ProjectDetails />
+            ) : (
+              <ProjectList />
+            )}
           </div>
         </div>
       </div>
