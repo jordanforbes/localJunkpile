@@ -37,7 +37,7 @@
       "category": "artwork",
       "title": "Bloo",
       "caption": "Color Field",
-      "description": "<p>Oil Painting</p>",
+      "description": "<p>Oil Painting</p><p>Color Field</p>",
       "medium": ["oil"],
       "images": {
         "cover": "bloo.jpg",
@@ -54,6 +54,45 @@
       "medium": ["oil"],
       "images": {
         "cover": "oy.jpg",
+        "other": []
+      }
+    },
+    {
+      "pid": 1,
+      "id": "oy",
+      "category": "artwork",
+      "title": "Oy",
+      "caption": "Pain-ting",
+      "description": "<p>Oil Painting</p>",
+      "medium": ["oil"],
+      "images": {
+        "cover": "oy.jpg",
+        "other": []
+      }
+    },
+    {
+      "pid": 1,
+      "id": "oy",
+      "category": "artwork",
+      "title": "Oy",
+      "caption": "Pain-ting",
+      "description": "<p>Oil Painting</p>",
+      "medium": ["oil"],
+      "images": {
+        "cover": "oy.jpg",
+        "other": []
+      }
+    },
+    {
+      "pid": 0,
+      "id": "bloo",
+      "category": "artwork",
+      "title": "Bloo",
+      "caption": "Color Field",
+      "description": "<p>Oil Painting</p><p>Color Field</p>",
+      "medium": ["oil"],
+      "images": {
+        "cover": "bloo.jpg",
         "other": []
       }
     }

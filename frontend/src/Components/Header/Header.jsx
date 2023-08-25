@@ -17,7 +17,7 @@ const Header = () => {
     <div className="headerBox">
       <h1 className="headerName">Jordan Forbes</h1>
       <br />
-      <button onClick={toggleAdmin}>Admin</button>
+      {/* <button onClick={toggleAdmin}>Admin</button> */}
     </div>
   );
 };

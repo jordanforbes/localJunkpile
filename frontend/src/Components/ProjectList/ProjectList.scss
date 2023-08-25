@@ -1,11 +1,8 @@
 @import "./ArtCard/ArtCard.scss";
 
-.coverItem {
-  float: left;
-  display: block;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  overflow: hidden;
-  margin-right: 10px;
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Align items vertically */
 }

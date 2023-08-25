@@ -19,17 +19,17 @@ const ProjectList = (props) => {
   const imageFolder = `${process.env.PUBLIC_URL}/media/${folder}/`;
 
   return (
-    <div className="projectList">
+    <div className="projectList ">
       {projectList ? (
         projectList.map((p) => (
-          <>
+          <div className="artDeck">
             <ArtCard
               cover={p.images.cover}
               src={`${imageFolder}${p.id}/${p.images.cover}`}
               title={p.title}
               project={p}
             />
-          </>
+          </div>
         ))
       ) : (
         <p>not loaded</p>

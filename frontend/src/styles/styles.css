@@ -2,27 +2,29 @@
   max-height: 500px !important; }
 
 .coverImg {
-  height: 600px; }
+  width: 500px; }
 
 .coverImgContainer {
-  width: 300px;
+  width: 400px;
   height: 400px;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 1; }
+
+.coverImgContainer:hover {
+  opacity: 0.75; }
 
 .artcardcontainer {
   display: block;
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px; }
+  float: left; }
 
-.coverItem {
-  float: left;
-  display: block;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  overflow: hidden;
-  margin-right: 10px; }
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Distribute items evenly */
+  align-items: center;
+  /* Align items vertically */ }
 
 .headerName {
   font-family: "lobster";

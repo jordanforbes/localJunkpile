@@ -28,19 +28,9 @@ const ProjectDetails = (props) => {
     setCover(imageFolder + projectState.id + "/" + projectState.images.cover);
   }, []);
 
-  // const parseImages = () => {
-  //   projectState.images.map((i) => {
-  //     i.cover === true
-  //       ? setCover(i.image)
-  //       : setOtherImages([...otherImages, i.image]);
-  //   });
-  //   return cover;
-  // };
-
-  useEffect(() => {
-    console.log("!!!!!!!!!!!!!!!cover");
-    console.log(cover);
-  }, [cover]);
+  const HTMLRenderer = ({ htmlString }) => {
+    return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
+  };
 
   const buildCarousel = () => {
     return (
@@ -67,7 +57,7 @@ const ProjectDetails = (props) => {
           <img className="carouselImg" src={cover} alt="cover" />
         )}
 
-        <p>{projectState.description}</p>
+        <HTMLRenderer htmlString={projectState.description} />
         <button onClick={handleClick}>back</button>
       </div>
     </>

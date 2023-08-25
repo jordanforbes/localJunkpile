@@ -16,14 +16,13 @@ import Admin from "./Components/Admin/Admin";
 import ProjectDetails from "./Components/ProjectList/ArtCard/ProjectDetails/ProjectDetails";
 import Header from "./Components/Header/Header";
 import { Button, ButtonGroup } from "react-bootstrap";
+import NavBar from "./Components/Navbar/Navbar";
 
 const App = () => {
-  const [artworkList, setArtworkList] = useState([]);
-  const [appProjectList, setAppProjectList] = useState([]);
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-  const viewState = useSelector((state) => state.viewSelector.view);
   const modeState = useSelector((state) => state.viewSelector.mode);
+  const viewState = useSelector((state) => state.viewSelector.view);
 
   useEffect(() => {
     const fetchData = () => {
@@ -40,7 +39,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    console.log("data", data);
     if (data) {
       dispatch(populateList(data));
     }
@@ -55,23 +53,6 @@ const App = () => {
     dispatch(selectList());
   };
 
-  const toggleAdmin = () => {};
-
-  const DisplayProjects = (props) => {
-    const appList = useSelector(
-      (state) => state.projectListSelector.app_projects
-    );
-    const artList = useSelector((state) => state.projectListSelector.artwork);
-    const viewState = useSelector((state) => state.viewSelector.view);
-    const modeState = useSelector((state) => state.viewSelector.mode);
-
-    return (
-      <>
-        <div>display projects</div>
-      </>
-    );
-  };
-
   return (
     <div className="App">
       <div className="container">
@@ -79,23 +60,15 @@ const App = () => {
           <Header />
         </div>
         <div className="row">
-          <div className="col-md-3"></div>
-          <div className="col-md-6">
-            <ButtonGroup>
-              <Button
-                onClick={toggleArt}
-                className="mx-2 d-inline-block btn btn-primary float-left"
-              >
-                Art
-              </Button>
-              <Button
-                onClick={toggleApps}
-                className="mx-2 d-inline-block btn btn-primary  float-left"
-              >
-                Apps
-              </Button>
-            </ButtonGroup>
+          <div className="col-md-11">
+            <NavBar />
           </div>
+          <div className="col-md-1"></div>
+        </div>
+        <div className="row">
+          <div className="col-md-3"></div>
+          <div className="col-md-6"></div>
+          <br />
           <div className="row">
             {modeState === "Admin" ? (
               <Admin />
