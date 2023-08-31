@@ -29,5 +29,31 @@
 .headerName {
   font-family: "lobster";
   font-size: 100px;
-  text-align: center;
+  text-align: left;
   /* margin-left: 5px ;  */ }
+
+.headerBox {
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-VariableFont_wght.ttf");
+  font-weight: light;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
+  font-weight: light;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: light;
+  font-style: normal; }
+
+body {
+  font-family: "Montserrat";
+  font-size: 14px; }

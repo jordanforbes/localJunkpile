@@ -18,17 +18,13 @@ const ProjectList = (props) => {
   const folder = viewState === "Art" ? "artwork" : "app_project";
   const imageFolder = `${process.env.PUBLIC_URL}/media/${folder}/`;
 
+  console.log(projectList);
   return (
     <div className="projectList ">
       {projectList ? (
         projectList.map((p) => (
           <div className="artDeck">
-            <ArtCard
-              cover={p.images.cover}
-              src={`${imageFolder}${p.id}/${p.images.cover}`}
-              title={p.title}
-              project={p}
-            />
+            <ArtCard project={p} />
           </div>
         ))
       ) : (

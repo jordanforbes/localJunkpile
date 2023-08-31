@@ -19,15 +19,33 @@
         "Sass",
         "AWS"
       ],
-      "images": {
-        "cover": "pggridactivemobile.png",
-        "other": [
-          "pggrid.png",
-          "pglarge.png",
-          "pgthumb.jpg",
-          "pgscreenshot.png"
-        ]
-      }
+      "images": [
+        {
+          "url": "pggridactivemobile.png",
+          "caption": "power gord caption",
+          "cover": true
+        },
+        {
+          "url": "pggrid.png",
+          "caption": "pg grid",
+          "cover": false
+        },
+        {
+          "url": "pglarge.png",
+          "caption": "pg large",
+          "cover": false
+        },
+        {
+          "url": "pgthumb.jpg",
+          "caption": "pg thumb",
+          "cover": false
+        },
+        {
+          "url": "pgscreenshot.png",
+          "caption": "pg screenshot",
+          "cover": false
+        }
+      ]
     }
   ],
   "artwork": [
@@ -39,10 +57,13 @@
       "caption": "Color Field",
       "description": "<p>Oil Painting</p><p>Color Field</p>",
       "medium": ["oil"],
-      "images": {
-        "cover": "bloo.jpg",
-        "other": []
-      }
+      "images": [
+        {
+          "url": "bloo.jpg",
+          "caption": "blue abstract",
+          "cover": true
+        }
+      ]
     },
     {
       "pid": 1,
@@ -52,10 +73,13 @@
       "caption": "Pain-ting",
       "description": "<p>Oil Painting</p>",
       "medium": ["oil"],
-      "images": {
-        "cover": "oy.jpg",
-        "other": []
-      }
+      "images": [
+        {
+          "url": "oy.jpg",
+          "caption": "abstract?",
+          "cover": true
+        }
+      ]
     },
     {
       "pid": 1,
@@ -65,36 +89,13 @@
       "caption": "Pain-ting",
       "description": "<p>Oil Painting</p>",
       "medium": ["oil"],
-      "images": {
-        "cover": "oy.jpg",
-        "other": []
-      }
-    },
-    {
-      "pid": 1,
-      "id": "oy",
-      "category": "artwork",
-      "title": "Oy",
-      "caption": "Pain-ting",
-      "description": "<p>Oil Painting</p>",
-      "medium": ["oil"],
-      "images": {
-        "cover": "oy.jpg",
-        "other": []
-      }
-    },
-    {
-      "pid": 0,
-      "id": "bloo",
-      "category": "artwork",
-      "title": "Bloo",
-      "caption": "Color Field",
-      "description": "<p>Oil Painting</p><p>Color Field</p>",
-      "medium": ["oil"],
-      "images": {
-        "cover": "bloo.jpg",
-        "other": []
-      }
+      "images": [
+        {
+          "url": "oy.jpg",
+          "caption": "abstract?",
+          "cover": true
+        }
+      ]
     }
   ]
 }

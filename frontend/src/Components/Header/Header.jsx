@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-
+import NavBar from "../Navbar/Navbar";
 import {
   selectArt,
   selectApp,
@@ -18,6 +18,7 @@ const Header = () => {
       <h1 className="headerName">Jordan Forbes</h1>
       <br />
       {/* <button onClick={toggleAdmin}>Admin</button> */}
+      <NavBar />
     </div>
   );
 };

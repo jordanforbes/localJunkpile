@@ -5,6 +5,8 @@ const app = express();
 const multer = require("multer");
 const PORT = 3001;
 
+const mode = useSelector()
+
 app.use(express.json());
 
 const storage = multer.diskStorage({

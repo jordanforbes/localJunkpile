@@ -1,2 +1,28 @@
 @import "../Components/ProjectList/ProjectList.scss";
 @import "../Components/Header/Header.scss";
+@import "../Components/Footer/Footer.scss";
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-VariableFont_wght.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+
+$defaultFont: "Montserrat";
+
+body {
+  font-family: $defaultFont;
+  font-size: 14px;
+}

@@ -15,8 +15,7 @@ import ProjectList from "./Components/ProjectList/ProjectList";
 import Admin from "./Components/Admin/Admin";
 import ProjectDetails from "./Components/ProjectList/ArtCard/ProjectDetails/ProjectDetails";
 import Header from "./Components/Header/Header";
-import { Button, ButtonGroup } from "react-bootstrap";
-import NavBar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -54,34 +53,31 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="row">
-          <Header />
-        </div>
-        <div className="row">
-          <div className="col-md-11">
-            <NavBar />
-          </div>
-          <div className="col-md-1"></div>
-        </div>
-        <div className="row">
-          <div className="col-md-3"></div>
-          <div className="col-md-6"></div>
-          <br />
+    <>
+      <div className="App">
+        <div className="container">
           <div className="row">
-            {modeState === "Admin" ? (
-              <Admin />
-            ) : modeState === "Detail" ? (
-              <ProjectDetails />
-            ) : (
-              <ProjectList />
-            )}
+            <Header />
+          </div>
+
+          <div className="row">
+            <div className="col-md-3"></div>
+            <div className="col-md-6"></div>
+            <br />
+            <div className="row">
+              {modeState === "Admin" ? (
+                <Admin />
+              ) : modeState === "Detail" ? (
+                <ProjectDetails />
+              ) : (
+                <ProjectList />
+              )}
+            </div>
           </div>
         </div>
       </div>
-      <div className="col-md-3"></div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
