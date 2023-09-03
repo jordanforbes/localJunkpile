@@ -19,16 +19,31 @@ const ArtCard = (props) => {
   const imageFolder = `${process.env.PUBLIC_URL}/media/${folder}/${props.project.id}/`;
 
   const images = props.project.images;
-  useEffect(() => {
-    props.project.images.map((i) =>
-      i.cover.url ? (i.cover === true ? setCover(i) : "") : ""
-    );
-    console.log("cover", cover);
-  }, [props.project]);
+  // useEffect(() => {
+  //   props.project.images.map((i) =>
+  //     i.cover.url ? (i.cover === true ? setCover(i) : "") : ""
+  //   );
+  //   console.log("cover", cover);
+  // }, []);
 
+  // useEffect(() => {
+  //   props.project.images.map((i) =>
+  //     i.cover.url ? (i.cover === true ? setCover(i) : "") : ""
+  //   );
+  // }, [cover]);
   useEffect(() => {
-    setCoverUrl(imageFolder + cover.url);
-  }, [cover]);
+    setCover(props.project.images.url);
+    console.log(props.index);
+    props.project.images.map((img) => {
+      console.log(img);
+      if (img.cover) {
+        console.log("is cover", img.url);
+        setCover(img.url);
+      }
+    });
+    console.log(images);
+  }, [viewState]);
+
   const setDetails = () => {
     viewState === "Art"
       ? dispatch(setArt(props.project))
@@ -41,7 +56,7 @@ const ArtCard = (props) => {
     <div className="artcardcontainer">
       <div onClick={setDetails}>
         <div className="coverImgContainer">
-          <img className="coverImg" alt={"project"} src={"none"} />
+          <img className="coverImg" alt={"project"} src={imageFolder + cover} />
         </div>
         <p>{props.project.title}</p>
       </div>

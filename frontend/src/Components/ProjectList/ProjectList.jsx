@@ -22,9 +22,9 @@ const ProjectList = (props) => {
   return (
     <div className="projectList ">
       {projectList ? (
-        projectList.map((p) => (
+        projectList.map((p, i) => (
           <div className="artDeck">
-            <ArtCard project={p} />
+            <ArtCard project={p} index={i} />
           </div>
         ))
       ) : (
