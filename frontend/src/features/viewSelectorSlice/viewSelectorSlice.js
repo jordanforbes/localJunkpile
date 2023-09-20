@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  view: "Art",
+  view: "Splash",
   mode: "List",
 };
 
@@ -24,9 +24,18 @@ export const viewSelectorSlice = createSlice({
     selectAdmin: (state) => {
       state.mode = "Admin";
     },
+    selectSplash: (state) => {
+      state.view = "Splash";
+    },
   },
 });
 
-export const { selectArt, selectApp, selectList, selectDetail, selectAdmin } =
-  viewSelectorSlice.actions;
+export const {
+  selectArt,
+  selectApp,
+  selectList,
+  selectDetail,
+  selectAdmin,
+  selectSplash,
+} = viewSelectorSlice.actions;
 export default viewSelectorSlice.reducer;

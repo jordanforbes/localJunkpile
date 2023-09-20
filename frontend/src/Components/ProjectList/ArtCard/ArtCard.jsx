@@ -8,10 +8,9 @@ import { selectDetail } from "../../../features/viewSelectorSlice/viewSelectorSl
 
 const ArtCard = (props) => {
   const [cover, setCover] = useState();
-  const [coverUrl, setCoverUrl] = useState();
   const dispatch = useDispatch();
   const viewState = useSelector((state) => state.viewSelector.view);
-  const projectState = useSelector((state) => state.detailSelector);
+  // const projectState = useSelector((state) => state.detailSelector);
   // const modeState = useSelector((state) => state.viewSelector.mode);
 
   const folder = viewState === "Art" ? "artwork" : "app_project";
@@ -19,29 +18,14 @@ const ArtCard = (props) => {
   const imageFolder = `${process.env.PUBLIC_URL}/media/${folder}/${props.project.id}/`;
 
   const images = props.project.images;
-  // useEffect(() => {
-  //   props.project.images.map((i) =>
-  //     i.cover.url ? (i.cover === true ? setCover(i) : "") : ""
-  //   );
-  //   console.log("cover", cover);
-  // }, []);
 
-  // useEffect(() => {
-  //   props.project.images.map((i) =>
-  //     i.cover.url ? (i.cover === true ? setCover(i) : "") : ""
-  //   );
-  // }, [cover]);
   useEffect(() => {
     setCover(props.project.images.url);
-    console.log(props.index);
     props.project.images.map((img) => {
-      console.log(img);
       if (img.cover) {
-        console.log("is cover", img.url);
         setCover(img.url);
       }
     });
-    console.log(images);
   }, [viewState]);
 
   const setDetails = () => {
@@ -51,7 +35,6 @@ const ArtCard = (props) => {
     dispatch(selectDetail());
   };
 
-  // console.log("artcard", coverUrl);
   return (
     <div className="artcardcontainer">
       <div onClick={setDetails}>

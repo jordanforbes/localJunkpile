@@ -1,12 +1,5 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectArt,
-  selectApp,
-  selectList,
-  selectDetail,
-  selectAdmin,
-} from "./features/viewSelectorSlice/viewSelectorSlice";
 import { populateList } from "./features/projectListSelectorSlice/projectListSelectorSlice";
 import "./App.css";
 import "./styles/styles.css";
@@ -21,7 +14,7 @@ const App = () => {
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
   const modeState = useSelector((state) => state.viewSelector.mode);
-  const viewState = useSelector((state) => state.viewSelector.view);
+  // const viewState = useSelector((state) => state.viewSelector.view);
 
   useEffect(() => {
     const fetchData = () => {
@@ -42,15 +35,6 @@ const App = () => {
       dispatch(populateList(data));
     }
   }, [data]);
-
-  const toggleArt = () => {
-    dispatch(selectArt());
-    dispatch(selectList());
-  };
-  const toggleApps = () => {
-    dispatch(selectApp());
-    dispatch(selectList());
-  };
 
   return (
     <>

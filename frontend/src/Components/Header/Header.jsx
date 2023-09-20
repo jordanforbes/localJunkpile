@@ -1,23 +1,38 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../Navbar/Navbar";
 import {
-  selectArt,
-  selectApp,
-  selectList,
-  selectDetail,
+  selectSplash,
   selectAdmin,
 } from "../../features/viewSelectorSlice/viewSelectorSlice";
+import { useSpring, animated } from "react-spring";
 
 const Header = () => {
+  // const [splash, notSplash] = useState(false);
+  const viewState = useSelector((state) => state.viewSelector.view);
+  const springProps = useSpring({
+    fontSize: viewState === "Splash" ? "150px" : "50px",
+  });
   const dispatch = useDispatch();
   const toggleAdmin = () => {
     dispatch(selectAdmin());
   };
+
+  const toggleSplash = () => {
+    dispatch(selectSplash());
+  };
+
   return (
     <div className="headerBox">
-      <h1 className="headerName">Jordan Forbes</h1>
+      <div onClick={toggleSplash}>
+        <animated.h1
+          className={` ${viewState === "Splash" ? "splashName" : "headerName"}`}
+          style={springProps}
+        >
+          Jordan Forbes
+        </animated.h1>
+        {/* <button onClick={toggleAdmin}>Admin</button> */}
+      </div>
       <br />
-      {/* <button onClick={toggleAdmin}>Admin</button> */}
       <NavBar />
     </div>
   );

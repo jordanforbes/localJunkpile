@@ -28,13 +28,21 @@
 
 .headerName {
   font-family: "lobster";
-  font-size: 100px;
   text-align: left;
   /* margin-left: 5px ;  */ }
+
+.splashName {
+  font-family: "lobster";
+  text-align: center; }
 
 .headerBox {
   padding-top: 50px;
   padding-bottom: 100px; }
+
+.footer {
+  background-color: darkgray;
+  height: 100px;
+  width: 100%; }
 
 @font-face {
   font-family: "Quicksand";
