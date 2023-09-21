@@ -18,8 +18,10 @@ const Admin = (props) => {
     },
   });
 
+  const [testData, setTestData] = useState({ test: "" });
+
   useEffect(() => {
-    console.log(formData);
+    // console.log(formData);
   }, []);
 
   const handleChange = (e) => {
@@ -65,8 +67,34 @@ const Admin = (props) => {
 
     console.log("form data to sumbit", formData);
   };
+  // TESTER ///
+
+  const testChange = (e) => {
+    const { value, name } = e.target;
+    setTestData({ [name]: value });
+  };
+
+  const testSubmit = (e) => {
+    e.preventDefault();
+    console.log("testSubmit", testData);
+  };
   return (
     <div>
+      <div>
+        <p>test</p>
+        <form onSubmit={testSubmit}>
+          <label>
+            Title:
+            <input
+              type="text"
+              name="test"
+              value={testData.test}
+              onChange={testChange}
+            />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
       <h1>Submit Form and Add to JSON</h1>
       <form onSubmit={handleSubmit}>
         <label>

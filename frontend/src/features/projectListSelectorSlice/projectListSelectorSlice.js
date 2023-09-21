@@ -14,6 +14,9 @@ export const projectListSelectorSlice = createSlice({
       state.app_projects = action.payload.app_project;
       state.artwork = action.payload.artwork;
     },
+    // getListObj: (state) => {
+    //   return [state.app_projects, state.artwork];
+    // },
   },
 });
 

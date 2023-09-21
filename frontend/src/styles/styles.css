@@ -28,8 +28,15 @@
 
 .headerName {
   font-family: "lobster";
-  text-align: left;
   /* margin-left: 5px ;  */ }
+
+.selectorBox {
+  white-space: nowrap;
+  max-width: 300px;
+  cursor: pointer; }
+
+.selectorBox:hover {
+  color: gray; }
 
 .splashName {
   font-family: "lobster";

@@ -23,17 +23,20 @@ const Header = () => {
 
   return (
     <div className="headerBox">
-      <div onClick={toggleSplash}>
+      <div
+        onClick={toggleSplash}
+        className={`${viewState === "Splash" ? "" : "selectorBox"}`}
+      >
         <animated.h1
           className={` ${viewState === "Splash" ? "splashName" : "headerName"}`}
           style={springProps}
         >
           Jordan Forbes
         </animated.h1>
-        {/* <button onClick={toggleAdmin}>Admin</button> */}
       </div>
       <br />
       <NavBar />
+      <button onClick={toggleAdmin}>Admin</button>
     </div>
   );
 };

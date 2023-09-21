@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { populateList } from "./features/projectListSelectorSlice/projectListSelectorSlice";
+import {
+  populateList,
+  getListObj,
+} from "./features/projectListSelectorSlice/projectListSelectorSlice";
 import "./App.css";
 import "./styles/styles.css";
 import axios from "axios";
@@ -33,6 +36,7 @@ const App = () => {
   useEffect(() => {
     if (data) {
       dispatch(populateList(data));
+      // console.log("list", dispatch(getListObj()));
     }
   }, [data]);
 

@@ -1,11 +1,18 @@
 .headerName {
   font-family: "lobster";
   // font-size: 100px;
-  text-align: left;
   /* margin-left: 5px ;  */
 }
 // .headerbox {
 // }
+.selectorBox {
+  white-space: nowrap;
+  max-width: 300px;
+  cursor: pointer;
+}
+.selectorBox:hover {
+  color: gray;
+}
 
 .splashName {
   font-family: "lobster";
