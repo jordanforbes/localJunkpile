@@ -9,14 +9,16 @@
   height: 400px;
   overflow: hidden;
   cursor: pointer;
-  opacity: 1; }
+  opacity: 1;
+  margin-bottom: 10px; }
 
 .coverImgContainer:hover {
   opacity: 0.75; }
 
 .artcardcontainer {
   display: block;
-  float: left; }
+  float: left;
+  padding-bottom: 25px; }
 
 .projectList {
   display: flex;

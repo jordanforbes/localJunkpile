@@ -36,7 +36,6 @@ const Header = () => {
       </div>
       <br />
       <NavBar />
-      <button onClick={toggleAdmin}>Admin</button>
     </div>
   );
 };

@@ -82,17 +82,161 @@
       ]
     },
     {
-      "pid": 1,
-      "id": "oy",
+      "pid": 3,
+      "id": "ori",
       "category": "artwork",
-      "title": "Oy",
-      "caption": "Pain-ting",
+      "title": "Ori",
+      "caption": "Portrait of a friend",
       "description": "<p>Oil Painting</p>",
       "medium": ["oil"],
       "images": [
         {
-          "url": "oy.jpg",
-          "caption": "abstract?",
+          "url": "ori.jpg",
+          "caption": "Portrait of a friend",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 4,
+      "id": "greenface",
+      "category": "artwork",
+      "title": "Green Face",
+      "caption": "Self Portrait Close up",
+      "description": "<p>Oil Painting</p>",
+      "medium": ["oil"],
+      "images": [
+        {
+          "url": "greenface.jpg",
+          "caption": "Self Portrait Close up",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 5,
+      "id": "mick",
+      "category": "artwork",
+      "title": "Mick",
+      "caption": "Portrait of a friend",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "mick.png",
+          "caption": "Portrait of a friend",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 6,
+      "id": "stars",
+      "category": "artwork",
+      "title": "Stars",
+      "caption": "Portrait of a tumblr model",
+      "description": "<p>Oil Painting</p>",
+      "medium": ["oil"],
+      "images": [
+        {
+          "url": "stars.jpg",
+          "caption": "Portrait of a tumblr model",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 7,
+      "id": "lifedrawing1",
+      "category": "artwork",
+      "title": "Live Painting #1",
+      "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "lifedrawing1.jpg",
+          "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 8,
+      "id": "lifedrawing2",
+      "category": "artwork",
+      "title": "Live Painting #2",
+      "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "lifedrawing2.png",
+          "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 9,
+      "id": "lifedrawing3",
+      "category": "artwork",
+      "title": "Live Painting #3",
+      "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "lifedrawing3.png",
+          "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 10,
+      "id": "lifedrawing4",
+      "category": "artwork",
+      "title": "Live Painting #4",
+      "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "lifedrawing4.jpg",
+          "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 11,
+      "id": "lifedrawing5",
+      "category": "artwork",
+      "title": "Live Painting #5",
+      "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "lifedrawing5.jpg",
+          "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+          "cover": true
+        }
+      ]
+    },
+    {
+      "pid": 12,
+      "id": "lifedrawing6",
+      "category": "artwork",
+      "title": "Live Painting #6",
+      "caption": "Portrait of a live model at the Philadelphia Sketch Club",
+      "description": "<p>Digital Painting</p>",
+      "medium": ["digital"],
+      "images": [
+        {
+          "url": "lifedrawing6.jpg",
+          "caption": "Portrait of a live model at the Philadelphia Sketch Club",
           "cover": true
         }
       ]
