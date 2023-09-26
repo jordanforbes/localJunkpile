@@ -28,6 +28,12 @@
   align-items: center;
   /* Align items vertically */ }
 
+.activeBtn {
+  color: red; }
+
+.activeBtn:hover {
+  color: #ff6060; }
+
 .headerName {
   font-family: "lobster";
   /* margin-left: 5px ;  */ }
