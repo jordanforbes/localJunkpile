@@ -1,19 +1,17 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import viewSelectorSlice, {
+import {
   selectArt,
   selectApp,
   selectList,
-  selectDetail,
-  selectAdmin,
 } from "./../../../features/viewSelectorSlice/viewSelectorSlice";
 import Nav from "react-bootstrap/Nav";
 
 const NavButton = (props) => {
   const [active, toggleActive] = useState(false);
   const view = useSelector((state) => state.viewSelector.view);
-
   const dispatch = useDispatch();
+
   const toggleArt = () => {
     dispatch(selectArt());
     dispatch(selectList());
@@ -31,7 +29,7 @@ const NavButton = (props) => {
 
   useEffect(() => {
     view === props.view ? toggleActive(true) : toggleActive(false);
-  });
+  }, [view]);
 
   return (
     <Nav.Link

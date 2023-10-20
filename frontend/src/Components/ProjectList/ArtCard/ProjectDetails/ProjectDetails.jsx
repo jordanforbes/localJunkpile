@@ -55,15 +55,33 @@ const ProjectDetails = (props) => {
   return (
     <>
       <div className="container">
-        <h1>{projectState.title}</h1>
-        {otherImages[0] ? (
-          buildCarousel()
-        ) : (
-          <img className="carouselImg" src={coverUrl} alt="cover" />
-        )}
-
-        <HTMLRenderer htmlString={projectState.description} />
-        <button onClick={handleClick}>back</button>
+        <div className="row">
+          <h1>{projectState.title}</h1>
+        </div>
+        <div
+          className="row"
+          // style={{
+          //   display: "flex",
+          //   justifyContent: "space-between",
+          //   alignItems: "center",
+          // }}
+        >
+          {otherImages ? (
+            buildCarousel()
+          ) : (
+            <img className="carouselImg" src={coverUrl} alt="cover" />
+          )}
+        </div>
+        <div className="row">
+          <p>{projectState.caption}</p>
+        </div>
+        <div className="row">
+          <HTMLRenderer htmlString={projectState.description} />
+          {/* <HTMLRenderer htmlString={projectState.caption} /> */}
+        </div>
+        <div className="row">
+          <button onClick={handleClick}>back</button>
+        </div>
       </div>
     </>
   );

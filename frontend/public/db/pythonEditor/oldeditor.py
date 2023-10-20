@@ -7,7 +7,8 @@ from PIL import Image, ImageTk
 
 def add_json_data():
     # Get data from the input fields
-    new_name = name_entry.get()
+    new_pid: 
+    new_title = name_entry.get()
     new_email = email_entry.get()
     # pid = number_entry.get()
 
